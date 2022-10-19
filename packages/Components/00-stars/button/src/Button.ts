@@ -10,30 +10,41 @@ export class Button extends LitElement {
   @property({ type: Boolean, attribute: 'is-disabled' })
   isDisabled = false;
 
-  @property({ type: String })
-  label = '';
-
   @property({ type: String, attribute: 'button-size' })
   buttonSize: ButtonSize = 'md';
 
   @property({ type: String, attribute: 'button-variant' })
-  buttonVariant: ButtonVariant = 'primary';
+  buttonVariant!: ButtonVariant;
 
   @property()
   onClick!: () => void;
 
+  @property({ type: String, attribute: 'button-url' })
+  buttonUrl!: string;
+
   static styles = [componentStyles];
 
   render() {
-    return html`
-      <button
-        ?disabled=${this.isDisabled}
-        class="btn ${this.buttonVariant} ${this.buttonSize}"
-        @click=${this.onClick}
-      >
-        <slot></slot>
-      </button>
-    `;
+    console.log(this.isDisabled);
+
+    return this.buttonUrl
+      ? html`
+          <a
+            aria-disabled=${this.isDisabled}
+            class="btn ${this.buttonVariant} ${this.buttonSize}"
+            @click=${this.onClick}
+            href=${this.buttonUrl}
+          >
+            <slot></slot>
+          </a>
+        `
+      : html`<button
+          ?disabled=${this.isDisabled}
+          class="btn ${this.buttonVariant} ${this.buttonSize}"
+          @click=${this.onClick}
+        >
+          <slot></slot>
+        </button>`;
   }
 }
 
