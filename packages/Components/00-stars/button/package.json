@@ -1,0 +1,21 @@
+{
+  "name": "space-button",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "pre-publish": "yarn publish",
+    "build": "tsc"
+  },
+  "files": [
+    "/dist/"
+  ],
+  "dependencies": {
+    "lit": "^2.4.0",
+    "tslib": "^2.4.0"
+  }
+}

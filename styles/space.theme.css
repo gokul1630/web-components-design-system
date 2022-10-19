@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+:root {
+  /** primary button background colors */
+  --btn-bg-primary-default: #17494d;
+  --btn-bg-primary-hover: #012b30;
+  --btn-bg-primary-focused: #17494d;
+  --btn-bg-primary-disabled: #daeded;
+
+  /** secondary button background colors */
+  --btn-bg-secondary-default: #d8dcde;
+  --btn-bg-secondary-hover: #e9ebed;
+  --btn-bg-secondary-focused: #ffffff;
+  --btn-bg-secondary-disabled: #ffffff;
+
+  /** button border radius */
+  --btn-border-radius: 8px;
+
+  /** button font sizes */
+  --btn-fs-sm: 0.875rem;
+  --btn-fs-base: 1rem;
+  --btn-fs-lg: 1.125rem;
+
+  /** button line heights */
+  --btn-lh-sm: 1.125rem;
+  --btn-lh-base: 1.5rem;
+  --btn-lh-lg: 1.75rem;
+}
