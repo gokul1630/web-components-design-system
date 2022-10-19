@@ -2,9 +2,6 @@ module.exports = {
   core: {
     builder: {
       name: 'webpack5',
-      options: {
-        fsCache: true,
-      },
     },
   },
   features: { storyStoreV7: true },
