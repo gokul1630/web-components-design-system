@@ -60,6 +60,6 @@ ${result.css}\`;`,
 };
 
 // Run the component style generation.
-glob('packages/**/*.css', (err, files) => {
+glob('src/**/*.css', (err, files) => {
   files.forEach(createCssLiterals);
 });
