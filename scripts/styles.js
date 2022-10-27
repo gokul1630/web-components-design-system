@@ -2,7 +2,6 @@
 /* eslint-disable global-require */
 /* eslint-disable no-console */
 const yargs = require('yargs');
-const gaze = require('gaze');
 const postcss = require('postcss');
 const fs = require('fs');
 const glob = require('glob');

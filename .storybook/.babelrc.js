@@ -17,22 +17,11 @@ module.exports = {
     '@babel/preset-typescript',
   ],
   plugins: [
-    // 'babel-plugin-named-exports-order',
     [
       '@babel/plugin-proposal-decorators',
       {
         decoratorsBeforeExport: true,
       },
     ],
-    // ['@babel/plugin-proposal-class-properties', { loose: false }],
-    // ['@babel/plugin-proposal-private-methods', { loose: false }],
-    // '@babel/plugin-proposal-export-default-from',
-    // '@babel/plugin-syntax-dynamic-import',
-    // [
-    //   '@babel/plugin-proposal-object-rest-spread',
-    //   { loose: true, useBuiltIns: true },
-    // ],
-    // 'babel-plugin-macros',
-    // ['emotion', { sourceMap: true, autoLabel: true }],
   ],
 };
