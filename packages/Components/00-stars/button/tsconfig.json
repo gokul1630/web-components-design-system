@@ -1,9 +1,0 @@
-{
-  "extends": "../../../../Configs/tsconfig/lit.json",
-  "include": ["index.ts", "src/**/*.ts"],
-  "exclude": ["src/**/*stories.ts", "dist"],
-  "compilerOptions": {
-    "rootDir": ".",
-    "outDir": "dist"
-  }
-}
