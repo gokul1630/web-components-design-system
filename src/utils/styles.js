@@ -5,7 +5,8 @@ const yargs = require('yargs');
 const postcss = require('postcss');
 const fs = require('fs');
 const glob = require('glob');
-const config = require('../postcss.config');
+const config = require('../../postcss.config');
+const gaze = require('gaze');
 
 const options = yargs.option('watch', {
   type: 'boolean',
@@ -58,7 +59,17 @@ ${result.css}\`;`,
   );
 };
 
-// Run the component style generation.
-glob('src/**/*.css', (err, files) => {
-  files.forEach(createCssLiterals);
-});
+// watch css file changes
+if (options.watch) {
+  gaze('src/**/*.css', (err, watcher) => {
+    if (err) throw err;
+    watcher.on('added', createCssLiterals);
+    watcher.on('changed', createCssLiterals);
+  });
+} else {
+  // Run the component style generation.
+  glob('src/**/*.css', (err, files) => {
+    if (err) throw err;
+    files.forEach(createCssLiterals);
+  });
+}
