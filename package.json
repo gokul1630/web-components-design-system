@@ -33,7 +33,8 @@
     "restart": "yarn reset && yarn storybook",
     "rebuild": "yarn reset && yarn build",
     "start:storybook": "yarn prep:css && start-storybook -p 6006",
-    "storybook": "npm-run-all -p css:watch start:storybook"
+    "storybook": "npm-run-all -p css:watch start:storybook",
+    "prep:icons": "node src/utils/generateIconExport.js"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
