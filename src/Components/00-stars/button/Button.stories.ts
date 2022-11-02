@@ -3,7 +3,7 @@ import './src/Button';
 
 export default {
   title: 'Stars/Button',
-  component: 'space-button',
+  component: 'lit-button',
   args: {
     label: 'Button',
     disabled: false,
@@ -22,12 +22,12 @@ export default {
 
 const Template = ({ label, size, buttonVariant, disabled, buttonUrl }: any) => {
   return html`
-    <space-button
+    <lit-button
       button-variant=${buttonVariant}
       ?is-disabled=${disabled}
       button-size="${size}"
       button-url=${buttonUrl}
-      >${label}</space-button
+      >${label}</lit-button
     >
   `;
 };

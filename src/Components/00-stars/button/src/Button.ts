@@ -5,7 +5,7 @@ import componentStyles from './Button.css.lit';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type ButtonVariant = 'primary' | 'secondary';
 
-@customElement('space-button')
+@customElement('lit-button')
 export class Button extends LitElement {
   @property({ type: Boolean, attribute: 'is-disabled' })
   isDisabled = false;
@@ -50,6 +50,6 @@ export class Button extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'space-button': Button;
+    'lit-button': Button;
   }
 }

@@ -1,3 +1,1 @@
-# Spacekit
-
-# 
+# Web Components Design System

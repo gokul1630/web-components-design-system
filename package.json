@@ -1,10 +1,10 @@
 {
-  "name": "spacekit",
+  "name": "lit",
   "version": "0.0.0",
   "private": "true",
   "license": "MIT",
-  "main": "dist/spacekit.min.cjs.js",
-  "module": "dist/spacekit.min.esm.js",
+  "main": "dist/lit.min.cjs.js",
+  "module": "dist/lit.min.esm.js",
   "typings": "dist/packages/index.d.ts",
   "files": [
     "dist"

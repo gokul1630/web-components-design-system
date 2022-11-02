@@ -4,9 +4,9 @@
 
 :root {
   /** primary button background colors */
-  --btn-bg-primary-default: #17494d;
-  --btn-bg-primary-hover: #012b30;
-  --btn-bg-primary-focused: #17494d;
+  --btn-bg-primary-default: blue;
+  --btn-bg-primary-hover: rgb(73, 73, 221);
+  --btn-bg-primary-focused: rgb(10, 10, 189);
   --btn-bg-primary-disabled: #daeded;
 
   /** secondary button background colors */
